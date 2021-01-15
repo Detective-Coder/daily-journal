@@ -1,0 +1,34 @@
+body {
+  height: 50vh;
+}
+
+main {
+  height: 100vh;
+}
+
+.title {
+  letter-spacing: .1em;
+  font-size: 3em;
+}
+
+.footer {
+  margin-top: 3em;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.fa-github {
+  font-size: 2em;
+  color: #fff;
+}
+
+.logo {
+  background-color: rgb(255, 0, 0);
+  padding: 1em;
+  margin-left: 2em;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
