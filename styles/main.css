@@ -8,6 +8,10 @@ main {
 
 body {
   padding-top: 115px;
+  background-image: url("../images/code1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 /* Header Section */
