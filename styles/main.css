@@ -1,13 +1,9 @@
-body {
-  height: 50vh;
-}
-
 main {
-  height: 82vh;
+  height: 80vh;
 }
 
 body {
-  padding-top: 115px;
+  padding-top: 155px;
   background-image: url("../images/code1.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
