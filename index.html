@@ -24,11 +24,11 @@
   <main>
     <!-- Form Component -->
     <form class="bg-light p-5 mb-5">
-      <div class="mb-3">
+      <div class="mb-3 col-sm-5">
         <label for="date" class="form-label">Date</label>
         <input type="date" class="form-control" id="date">
       </div>
-      <div class="mb-3">
+      <div class="mb-3 col-sm-8">
         <label for="concepts" class="form-label">Concepts</label>
         <input type="text" class="form-control" id="concepts">
       </div>
@@ -36,21 +36,31 @@
         <label for="textarea" class="form-label">Entry</label>
         <textarea class="form-control" id="textarea" rows="3"></textarea>
       </div>
-      <div class="mb-3 form-check">
-        <h5>Mood</h5>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-        <label class="form-check-label" for="inlineRadio1">Happy</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-        <label class="form-check-label" for="inlineRadio2">Neutral</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-        <label class="form-check-label" for="inlineRadio3">Sad</label>
-      </div>
+     
+      <fieldset class="row mb-3">
+        <legend class="col-form-label col-sm-2 pt-0">Mood</legend>
+        <div class="col-sm-10">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+            <label class="form-check-label" for="gridRadios1">
+              Happy
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+            <label class="form-check-label" for="gridRadios2">
+              Neutral
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
+            <label class="form-check-label" for="gridRadios3">
+              Sad
+            </label>
+          </div>
+        </div>
+      </fieldset>
+
       <button type="submit" class="btn btn-primary d-block mt-4">Record Journal Entry</button>
     </form>
 

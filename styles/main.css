@@ -24,6 +24,17 @@ body {
   font-size: 3em;
 }
 
+/* Form */
+form {
+  max-width: 60vw;
+  margin: 0 auto;
+}
+
+.col-sm-5,
+.col-sm-8 {
+  padding-left: 0;
+}
+
 /* Footer Section */
 .footer {
   margin-top: 3em;
