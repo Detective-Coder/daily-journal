@@ -1,7 +1,7 @@
 /*
  *  Purpose:
  *    To render as many journal entry components as
- *    there are items in the collection exposed exported?? by the
+ *    there are items in the collection exported by the
  *    data provider component
  */
 import { useJournalEntries } from "./JournalDataProvider.js"
@@ -13,12 +13,13 @@ const entryLog = document.querySelector("#entryLog")
 export const EntryListComponent = () => {
     // Use the journal entry data from the data provider component
     const entries = useJournalEntries()
-
+    console.log(entries)
     for (const entry of entries) {
         /*
             Invoke the component that returns an
             HTML representation of a single entry
         */
-        entryLog.innerHTML += ???
+       let singleJournalEntry = JournalEntryComponent(entry);
+        entryLog.innerHTML += `${singleJournalEntry}`
     }
 }
