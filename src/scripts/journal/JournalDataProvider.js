@@ -57,14 +57,12 @@ let entries = []
 //   )
 //   return sortedByDate
 // }
-export const useJournalEntries = () => {
-  return entries.slice()
-}
+export const useJournalEntries = () => entries.slice
 
 export const getEntries = () => {
   return fetch("http://localhost:8088/entries")
     .then(response => response.json)
-    .then(function (parsedEntries) {
+    .then((parsedEntries) => {
       entries = parsedEntries
     })
 }

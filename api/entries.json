@@ -1,3 +1,18 @@
 {
-  "entries": []
+  "entries": [
+    {
+      "date": "2021-02-09",
+      "concept": "Saving Objects",
+      "entry": "We learned about saving to local json-server and printing to the dom",
+      "mood": "option1",
+      "id": 1
+    },
+    {
+      "date": "2021-02-09",
+      "concept": "test",
+      "entry": "more testing",
+      "mood": "option1",
+      "id": 2
+    }
+  ]
 }

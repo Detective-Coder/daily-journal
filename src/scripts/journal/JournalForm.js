@@ -27,7 +27,7 @@ export const EntryForm = () => {
           <legend class="col-form-label col-sm-2 pt-0">Mood</legend>
           <div class="col-sm-10">
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+              <input id="mood" class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
               <label class="form-check-label" for="gridRadios1">
                 Happy
               </label>
@@ -60,17 +60,18 @@ eventHub.addEventListener("click", clickEvent => {
   if (clickEvent.target.id === "saveEntry") {
     
       // Make a new object representation of a note, this seems to be the object with the info that we want to get and save into the local api, stored in a variable
-      let newContact = {
+      let newEntry = {
           // Key/value pairs here
-          "name": document.querySelector("#name").value,
-          "email": document.querySelector("#email").value,
-          "number": document.querySelector("#number").value
+          "date": document.querySelector("#date").value,
+          "concept": document.querySelector("#concepts").value,
+          "entry": document.querySelector("#textarea").value,
+          "mood": document.querySelector("#mood").value
       }
-      console.log(newContact)
+      console.log(newEntry)
 
       // Change API state and application state, we're calling the saveNote function - which takes in the info from the argument of newNote and writes it to the local api, then we're calling the NoteList function, which I believe just gets everything again
-      saveContact(newContact)
-      .then(ContactList) // Refresh your list of notes once you've saved your new one
-      console.log(newContact)
+      saveEntry(newEntry)
+      .then(EntryListComponent) // Refresh your list of notes once you've saved your new one
+      console.log(newEntry)
   }
 })
