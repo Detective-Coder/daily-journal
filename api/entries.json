@@ -13,6 +13,13 @@
       "entry": "more testing",
       "mood": "option1",
       "id": 2
+    },
+    {
+      "date": "2021-02-11",
+      "concept": "printing to the dom",
+      "entry": "we learned about printing a note to the dom",
+      "mood": "option1",
+      "id": 3
     }
   ]
 }
