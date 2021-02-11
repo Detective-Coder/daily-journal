@@ -1,4 +1,5 @@
 let entries = []
+let moods = []
 /*
   You export a function that provides a version of the
   raw data in the format that you want
@@ -10,6 +11,16 @@ let entries = []
 //   )
 //   return sortedByDate
 // }
+export const useMoods = () => moods.slice()
+
+export const getMoods = () => {
+  return fetch("http://localhost:8088/mood")
+    .then(response => response.json())
+    .then(parsedMoods => {
+      moods = parsedMoods
+    })
+}
+
 export const useJournalEntries = () => entries.slice()
 
 export const getEntries = () => {

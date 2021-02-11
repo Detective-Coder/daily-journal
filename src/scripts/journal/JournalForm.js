@@ -1,4 +1,4 @@
-import {saveEntry} from "./JournalDataProvider.js"
+import {saveEntry, useMoods, getMoods} from "./JournalDataProvider.js"
 import {EntryListComponent} from "./JournalEntryList.js"
 
 // this is where we're printing the form
@@ -8,6 +8,9 @@ const contentTarget = document.querySelector("#form-container")
 
 // this function contains the form where we get all the information that we want to save to our .json api
 export const EntryForm = () => {
+  getMoods().then(() => {
+    let moodCollection = useMoods()
+  
     contentTarget.innerHTML = `
       <div class="bg-light p-5 mb-5">
         <div class="mb-3 col-sm-5">
@@ -23,33 +26,23 @@ export const EntryForm = () => {
           <textarea class="form-control" id="textarea" rows="3"></textarea>
         </div>
       
-        <fieldset class="row mb-3">
-          <legend class="col-form-label col-sm-2 pt-0">Mood</legend>
-          <div class="col-sm-10">
-            <div class="form-check form-check-inline">
-              <input id="mood" class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-              <label class="form-check-label" for="gridRadios1">
-                Happy
-              </label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-              <label class="form-check-label" for="gridRadios2">
-                Neutral
-              </label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
-              <label class="form-check-label" for="gridRadios3">
-                Sad
-              </label>
-            </div>
-          </div>
-        </fieldset>
+        <div class="mb-3 col-sm-8">
+        <label for="mood" class="form-label">Mood</label>
+          <select id="mood" class="moodSelect">
+          ${
+            moodCollection.map(moodObject => {
+              const moodName = moodObject.value
+              const moodId = moodObject.id
+              return `<option value="${ moodId }">${ moodName }</option>`
+            })
+          } 
+          </select>        
+        </div>
 
         <button type="submit" id="saveEntry" class="btn btn-primary d-block mt-4">Record Journal Entry</button>
       </div>
     `
+  })
 }
 
 // getting a reference to the main element
