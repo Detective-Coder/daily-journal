@@ -4,25 +4,46 @@
       "date": "2021-02-11",
       "concept": "test",
       "entry": "double test",
-      "mood": "1",
+      "moodId": "1",
       "id": 4
     },
     {
       "date": "2021-02-11",
       "concept": "test",
       "entry": "triple test",
-      "mood": "1",
+      "moodId": "1",
       "id": 5
     },
     {
       "date": "2021-02-11",
       "concept": "ERDs",
       "entry": "Learning about Primary Keys and Foreign Keys",
-      "mood": "2",
+      "moodId": "2",
       "id": 6
+    },
+    {
+      "date": "2021-02-11",
+      "concept": "bark",
+      "entry": "bark test",
+      "moodId": "2",
+      "id": 7
+    },
+    {
+      "date": "2021-02-11",
+      "concept": "meow",
+      "entry": "meow test",
+      "moodId": "1",
+      "id": 8
+    },
+    {
+      "date": "2021-02-11",
+      "concept": "snazzz",
+      "entry": "snazzzz test",
+      "moodId": "3",
+      "id": 9
     }
   ],
-  "mood": [
+  "moods": [
     {
       "id": 1,
       "value": "Happy"

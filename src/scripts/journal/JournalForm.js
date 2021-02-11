@@ -1,5 +1,6 @@
-import {saveEntry, useMoods, getMoods} from "./JournalDataProvider.js"
+import {saveEntry} from "./JournalDataProvider.js"
 import {EntryListComponent} from "./JournalEntryList.js"
+import {getMoods, useMoods} from "./MoodProvider.js"
 
 // this is where we're printing the form
 const contentTarget = document.querySelector("#form-container")
@@ -58,7 +59,7 @@ eventHub.addEventListener("click", clickEvent => {
           "date": document.querySelector("#date").value,
           "concept": document.querySelector("#concepts").value,
           "entry": document.querySelector("#textarea").value,
-          "mood": document.querySelector("#mood").value
+          "moodId": document.querySelector("#mood").value
       }
       console.log(newEntry)
 

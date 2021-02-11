@@ -1,5 +1,6 @@
-import { useJournalEntries, getEntries, getMoods, useMoods } from "./JournalDataProvider.js"
+import { useJournalEntries, getEntries } from "./JournalDataProvider.js"
 import { JournalEntryComponent } from "./JournalEntry.js"
+import {getMoods, useMoods} from "./MoodProvider.js"
 
 // DOM reference to where all entries will be rendered
 
@@ -17,7 +18,7 @@ export const EntryListComponent = () => {
     // });
     journalEntries.forEach((singleEntry) => {
       const relatedMood = moods.find(mood => {
-        return mood.id === +singleEntry.mood
+        return mood.id === +singleEntry.moodId
       })
       entryLog.innerHTML += JournalEntryComponent(singleEntry, relatedMood);
     })
